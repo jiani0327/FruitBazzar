@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FruitBazzar.SignUpPage"
+             Title="Register"
+             BackgroundColor="#18282F"
+             Shell.NavBarIsVisible="False">
+
+
+    <StackLayout Padding="40,0" >
+
+        <VerticalStackLayout>
+            <Image Source="fruit.jpg"  HeightRequest="400" WidthRequest="390" Margin="0,-60,0,0"/>
+        </VerticalStackLayout>
+        
+
+        <!-- 用户信息输入部分 -->
+        <StackLayout Spacing="15">
+            <Frame BorderColor="White" CornerRadius="15" Padding="5">
+                <Entry Placeholder="Full Name" x:Name="FullNameEntry" />
+            </Frame>
+            <Frame BorderColor="White" CornerRadius="15" Padding="5">
+                <Entry Placeholder="Email" x:Name="EmailEntry" Keyboard="Email" />
+            </Frame>
+            <Frame BorderColor="White" CornerRadius="15" Padding="5">
+                <Entry Placeholder="Phone Number" x:Name="PhoneNumberEntry" Keyboard="Telephone" />
+            </Frame>
+            <Frame BorderColor="White" CornerRadius="15" Padding="5">
+                <Entry Placeholder="Password" x:Name="PasswordEntry" IsPassword="True" />
+            </Frame>
+            <Frame BorderColor="White" CornerRadius="15" Padding="5">
+                <Entry Placeholder="Confirm Password" x:Name="ConfirmPasswordEntry" IsPassword="True" />
+            </Frame>
+        </StackLayout>
+
+        <VerticalStackLayout>
+            <Button Text="Register" WidthRequest="120" Clicked="OnRegisterButtonClicked" BackgroundColor="White" TextColor="#18282F" Margin="0,15,0,0"  />
+        </VerticalStackLayout>
+
+        <!-- 注册按钮 -->
+       
+        
+    </StackLayout>
+
+    
+    
+
+</ContentPage>

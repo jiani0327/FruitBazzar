@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             x:Class="FruitBazzar.MainPage"
+             BackgroundColor="{StaticResource darkblue}">
+
+    <ScrollView>
+        <!--<VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Hello, World!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Welcome to .NET Multi-platform App UI"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>-->
+
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="20">
+            <!-- 图片 -->
+            <Image Source="fruit.jpg" Aspect="AspectFill" WidthRequest="390" HeightRequest="400" HorizontalOptions="Center"/>
+
+            <!-- 欢迎文本 -->
+            <Label Text="Welcome to Our App!"
+               FontSize="24"
+               TextColor="{DynamicResource White}"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+
+            <!-- 开始按钮 -->
+            <Button Text="Let's Get Started"
+                BackgroundColor="{DynamicResource White}"
+                TextColor="{DynamicResource darkblue}"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"
+               Command="{Binding NavigateCommand}"/>
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>

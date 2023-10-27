@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FruitBazzar.login"
+             Title="Login"
+             BackgroundColor="{StaticResource darkblue}"
+             Shell.NavBarIsVisible="False">
+    
+    
+    <VerticalStackLayout
+        Spacing="15"
+        Padding="30,0"
+        VerticalOptions="Center">
+       
+        <Image Source="fruit.jpg"  HeightRequest="400" WidthRequest="390" Margin="0,-160,0,0"/>
+        <VerticalStackLayout Spacing="5">
+            <Label Text="Welcome!" FontSize="28" TextColor="White" HorizontalTextAlignment="Center"/>
+            <Label Text="Login to your account" FontSize="18" TextColor="White" HorizontalTextAlignment="Center"/>
+        </VerticalStackLayout>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- 第一列 -->
+            <Frame Grid.Column="0" ZIndex="1" HasShadow="True" BorderColor="White" HeightRequest="56" WidthRequest="56" CornerRadius="28">
+                <Image Source="usericon.png" HeightRequest="20" WidthRequest="20"/>
+            </Frame>
+
+            <!-- 第二列 -->
+            <Frame Grid.Column="1" HeightRequest="55" Margin="0,0,0,0" Padding="0" HasShadow="True" BorderColor="White">
+                <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Fullname" Keyboard="Email"/>
+            </Frame>
+
+            <!-- 第三行 -->
+            <Frame Grid.Column="0" ZIndex="1" HasShadow="True" BorderColor="White" HeightRequest="56" WidthRequest="56" CornerRadius="28" Margin="0,60,0,0" Padding="10">
+                <Image Source="lockicon" HeightRequest="20" WidthRequest="20"/>
+            </Frame>
+
+            <!-- 第四行 -->
+            <Frame Grid.Column="1" HeightRequest="45" Margin="0,60,0,0" Padding="0" HasShadow="True" BorderColor="White">
+                <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Password" IsPassword="True"/>
+            </Frame>
+        </Grid>
+
+
+
+        <Button x:Name="BtnLogin" Text="Sign in" TextColor="#18282F" 
+                WidthRequest="100" 
+                CornerRadius="20"
+                HorizontalOptions="Center" 
+                BackgroundColor="White"
+                Clicked="BtnLogin_Clicked"/>
+
+        <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="Center">
+            <Label Text="Don't have account?" TextColor="White"/>
+            <Label Text="Sign Up Here" TextColor="White">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SignUpLabel_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+           
+        </StackLayout>
+        
+    </VerticalStackLayout>
+</ContentPage>
